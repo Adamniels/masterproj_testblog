@@ -1,0 +1,31 @@
+
+.container_main {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  padding-top: 10px;
+  grid-template-areas: "left middle right";
+  border: 2px solid red;
+}
+
+#left {
+  grid-area: left;
+  background-color: aqua;
+  border: 2px solid blue;
+}
+#middle {
+  grid-area: middle;
+  background-color: greenyellow;
+  border: 2px solid green;
+}
+#right {
+  grid-area: right;
+  background-color: palevioletred;
+  border: 2px solid purple;
+}
+
+
+/*
+TODO: ändra så att dem går ner på en rad efter en viss storlek
+*/
