@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url(variables.css);
+
+
+a {
+    color: var(--black);
+  }
+  h1 {
+    font-size: var(--font-size-xl);
+  }
+  h2 {
+    font-size: var(--font-size-lg);
+  }
+  h3 {
+    font-size: var(--font-size-md);
+  }
+
+.header {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  padding-top: 10px;
+  grid-template-areas:
+    "logo button"
+    "menu menu";
+}
+
+@media only screen and (min-width: 768px) {
+  .header {
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: "logo menu button";
+  }
+}
+
+.header__logo {
+  grid-area: logo;
+  font-weight: 800;
+  font-size: 25px;
+  text-decoration: none;
+}
+.header__logo:hover {
+  text-decoration: underline;
+}
+
+.header__nav {
+  grid-area: menu;
+  display: flex;
+  justify-content: center;
+}
+
+.header__profile {
+  grid-area: button;
+  display: flex;
+  justify-content: center;
+}
+
+.header__profile a {
+  font-weight: 600;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.header__search button:hover {
+  border: 2px solid var(--black);
+}
+
+/* Header -> navigation*/
+.header__nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+  font-weight: 600;
+  padding: 0;
+}
+
+.header__nav ul a {
+  padding: 10px;
+  text-decoration: none;
+}
+.header__nav ul a:hover {
+  padding: 10px;
+  text-decoration: underline;
+}
+.header__nav ul a.active {
+  color: var(--gray);
+}
+
+
+.profile_div {
+  display: flex;
+  align-items: center; /* Centrera ikon och text vertikalt */
+  gap: 8px; /* Skapa mellanrum mellan ikon och text */
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  padding: 4px 6px;
+  border-radius: 8px;
+}
+
+/* Profil-ikonen */
+.profile_icon {
+  width: 24px; 
+  height: 24px;
+}
+
+.profile_div:hover {
+  text-decoration: underline;
+}

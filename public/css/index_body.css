@@ -26,17 +26,25 @@
 TODO: ändra så att dem går ner på en rad efter en viss storlek
 */
 
-.columns_main_header {
+.columns-main__header {
   background-color: azure;
   text-align: center;
 }
 
-/* något sånt här, men kolla lite mer
-.todo_list{
+/* något sånt här, men kolla lite mer */
+.todo_list {
   list-style-type: none;
+  padding: 0px 5px;
+  margin: 0;
   background-color: bisque;
+
   display: flex;
   flex-direction: column;
+}
+
+.todo-checkbox {
+  display: inline-block;
+  text-align: right;
 }
 
 .todo_list li {
@@ -44,9 +52,29 @@ TODO: ändra så att dem går ner på en rad efter en viss storlek
   flex-direction: row;
   justify-content: space-between;
   text-decoration: none;
+  align-items: center;
 }
 
-.todo_list button{
-  background-color: aqua;
+.edit_todo_list{
+  text-align: center;
+  display: block;
 }
-*/
+
+
+.todo-checkbox {
+  min-width: 20px;
+  min-height: 20px;
+  cursor: pointer;
+  appearance: none;
+  border: 2px solid black;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-checkbox:checked {
+  background-color: green;
+  border: 2px solid darkgreen;
+  
+}
