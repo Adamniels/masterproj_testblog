@@ -7,11 +7,20 @@ const locals = {
     desc: "training for master project"
 }
 
-    res.render('index', {locals}); // to pass more obj pass them in {}
+    res.render('index', {locals, layout: 'layouts/unauthorized'}); 
 });
 
 router.get('/about', (req, res) => {
     res.render('about');
 })
+
+router.get('/homepage', (req, res) => {
+    const locals = {
+        title: "Master Project",
+        desc: "training for master project"
+    }
+    
+        res.render('homepage', {locals});
+    });
 
 module.exports = router;
