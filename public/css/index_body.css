@@ -1,4 +1,3 @@
-
 .container_main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -23,13 +22,31 @@
   border: 2px solid purple;
 }
 
-
 /*
 TODO: ändra så att dem går ner på en rad efter en viss storlek
 */
-
 
 .columns_main_header {
   background-color: azure;
   text-align: center;
 }
+
+/* något sånt här, men kolla lite mer
+.todo_list{
+  list-style-type: none;
+  background-color: bisque;
+  display: flex;
+  flex-direction: column;
+}
+
+.todo_list li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-decoration: none;
+}
+
+.todo_list button{
+  background-color: aqua;
+}
+*/
