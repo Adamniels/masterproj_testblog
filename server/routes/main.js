@@ -35,6 +35,27 @@ router.get("/homepage", async (req, res) => {
 
 /**
  * GET
+ * TODO :id
+ */
+router.get("/todo/:id", async (req, res) => {
+  try {
+    const locals = {
+      title: "Master Project",
+      desc: "training for master project",
+    };
+
+    let id = req.params.id;
+
+    const data = await Todo.findById({_id: id});
+    res.render("todo", { locals, data });
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+
+/**
+ * GET
  * ABOUT
  */
 router.get("/about", (req, res) => {

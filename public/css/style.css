@@ -53,5 +53,13 @@ img {
 
 .main {
   padding: 20px 0;
-  background-color: #7e7e7e;
+  /*background-color: #7e7e7e; */
+}
+
+
+/*
+för att hålla koll på todo
+*/
+.TODO{
+  color: red;
 }

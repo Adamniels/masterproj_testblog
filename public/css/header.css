@@ -80,7 +80,9 @@ a {
 }
 .header__nav ul a:hover {
   padding: 10px;
-  text-decoration: underline;
+  /* text-decoration: underline; */
+  background-color: grey;
+  border-radius: 0%;
 }
 .header__nav ul a.active {
   color: var(--gray);

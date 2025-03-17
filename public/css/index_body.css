@@ -3,7 +3,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
   grid-template-areas: "left middle right";
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 .columns-main{
@@ -12,18 +12,18 @@
 
 #left {
   grid-area: left;
-  background-color: aqua;
-  border: 2px solid blue;
+  /*background-color: aqua;
+  border: 2px solid blue;*/
 }
 #middle {
   grid-area: middle;
-  background-color: greenyellow;
-  border: 2px solid green;
+  /* background-color: greenyellow;
+  border: 2px solid green; */
 }
 #right {
   grid-area: right;
-  background-color: palevioletred;
-  border: 2px solid purple;
+  /* background-color: palevioletred;
+  border: 2px solid purple; */
 }
 
 /*
@@ -33,7 +33,7 @@ TODO: ändra så att dem går ner på en rad efter en viss storlek
 
 
 .columns-main__header {
-  background-color: azure;
+  /* background-color: azure; */
   text-align: center;
 }
 
@@ -42,7 +42,7 @@ TODO: ändra så att dem går ner på en rad efter en viss storlek
   list-style-type: none;
   padding: 0px 5px;
   margin: 0;
-  background-color: bisque;
+  /* background-color: bisque; */
 
   display: flex;
   flex-direction: column;
