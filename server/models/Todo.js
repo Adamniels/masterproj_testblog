@@ -20,6 +20,7 @@ const TodoSchema = new Schema({
   },
   // TODO:
   //  - deadline
+  //  - klar eller inte
 });
 
 module.exports = mongoose.model("Todo", TodoSchema);

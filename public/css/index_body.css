@@ -6,6 +6,10 @@
   border: 2px solid red;
 }
 
+.columns-main{
+  padding: 0px 10px;
+}
+
 #left {
   grid-area: left;
   background-color: aqua;
@@ -25,6 +29,8 @@
 /*
 TODO: ändra så att dem går ner på en rad efter en viss storlek
 */
+
+
 
 .columns-main__header {
   background-color: azure;
