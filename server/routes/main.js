@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Todo = require("../models/Todo");
+const User = require("../models/User");
 
 /**
  * GET
@@ -12,9 +13,28 @@ router.get("", (req, res) => {
     desc: "training for master project",
   };
 
-  res.render("index", { locals, layout: "layouts/unauthorized" });
+  res.render("login", { locals, layout: "layouts/unauthorized" });
 });
 
+/**
+ * POST
+ * LOGIN -> HOME
+ */
+router.post("/homepage", async (req, res) => {
+  try {
+    const { username, password } = req.body;
+    console.log(req.body);
+    /**
+     * TODO:
+     *  - ta hand om username och kolla med databas om det är korrekt part 7 9:22
+     */
+
+    const data = await Todo.find();
+    res.render("homepage", { data });
+  } catch (error) {
+    console.log(error);
+  }
+});
 /**
  * GET
  * HOME
@@ -46,13 +66,29 @@ router.get("/todo/:id", async (req, res) => {
 
     let id = req.params.id;
 
-    const data = await Todo.findById({_id: id});
+    const data = await Todo.findById({ _id: id });
     res.render("todo", { locals, data });
   } catch (error) {
     console.log(error);
   }
 });
 
+/**
+ * GET
+ * ABOUT
+ */
+router.get("/edit-todo", async (req, res) => {
+  try {
+    const locals = {
+      title: "Master Project",
+      desc: "training for master project",
+    };
+
+    res.render("edit-todo", { locals });
+  } catch (error) {
+    console.log(error);
+  }
+});
 
 /**
  * GET
